@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: rgb(170, 209, 244);
+  --box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+body {
+  font-family: "Merriweather", serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+}
+
+/* main body */
+.project-container {
+  height: 100vh;
+  position: relative;
+}
+.project-container h1 {
+  text-align: center;
+  margin-top: 2rem;
+}
+.project-box {
+  width: 80vw;
+  min-height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  margin: 2rem;
+  background-color: #ffff;
+  box-shadow: var(--box-shadow);
+  border-bottom: 6px solid black;
+  border-left: 6px solid var(--blue);
+}
+
+.heading {
+  font-size: 1.5rem;
+  width: 400px;
+  border-bottom: 2px solid rgb(19, 19, 27);
+  color: black;
+  
+}
+
+.subheading {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: rgb(94, 92, 92);
+ 
+}
+
+.btn{
+  margin-top: 1rem;
+}
+.btn:hover{
+  background-color: black;
+}
+
+.btn-info a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+.img img {
+  border-bottom: 6px solid black;
+  border-left: 6px solid var(--blue);
+  box-shadow: var(--box-shadow);
+}
+
+.img img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* footer */
+.info {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffff;
+  color: rgb(16, 16, 16);
+  text-align: center;
+  border-top: 1px solid black;
+}
+
+.info p {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .project-box {
+    flex-direction: column;
+  }
+
+  .img img{
+    margin: 4rem;
+  }
+  .img img:hover{
+    transform: scale(1);
+    cursor: pointer;
+  }
+  .subheading{
+    width: 70vw;
+  }
+}
+
+@media screen  and (max-width:640px){
+ .heading{
+  font-size: 1rem;
+  width:40vw;
+ }
+  .img img{
+    width: 60vw;
+    margin: 1rem;
+  }
+}
